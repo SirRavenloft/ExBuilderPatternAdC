@@ -1,4 +1,5 @@
 interface HousePlan {
+
     void setBasement(String basement);
 
     void setStructure(String structure);
@@ -48,6 +49,7 @@ interface HouseBuilder {
 }
 
 class IglooHouseBuilder implements HouseBuilder {
+
     private House house;
 
     public IglooHouseBuilder() {
@@ -76,6 +78,7 @@ class IglooHouseBuilder implements HouseBuilder {
 }
 
 class TipiHouseBuilder implements HouseBuilder {
+
     private House house;
 
     public TipiHouseBuilder() {
@@ -125,7 +128,9 @@ class CivilEngineer {
 }
 
 class Builder {
+
     public static void main(String[] args) {
+
         HouseBuilder iglooBuilder = new IglooHouseBuilder();
         CivilEngineer engineer = new CivilEngineer(iglooBuilder);
 
@@ -134,5 +139,6 @@ class Builder {
         House house = engineer.getHouse();
 
         System.out.println("Builder constructed: " + house);
+
     }
 }
